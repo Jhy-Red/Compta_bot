@@ -1,0 +1,42 @@
+<!doctype html>
+	<html lang="fr">
+		<head>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+			<meta charset="utf-8">
+			<title>Database</title>
+		</head>
+		<body>
+			<h1>Liste des documents :</h1> 
+			
+			<form method="POST" enctype="multipart/form-data" class = "refresh">
+				<h5> Filtre --:--
+					<label>Operation</label> :
+					<select name="op">
+						<option value ="AC">Achat</option>
+						<option value ="VT">Vente</option>
+						<option value ="OD">Divers</option>
+						<option value ="Z">Document</option>
+					</select>
+					
+					<label>Tiers</label> : <input type="text" name="tiers" size = 15/>
+					<label>Objet</label> : <input type="text" name="objet" size = 50/>
+					<input type="submit" value="Validation" />
+				</h5>
+			</form>
+			
+
+      {% for data in database %}
+        <tr>
+			<td> Date : {{ data.Date }}, </td>
+            <td> Operation : {{ data.Operation }}, </td>
+            <td> Tiers : {{ data.Tiers }}, </td>
+            <td> Objets :{{ data.Objet }}, </td>
+			<td> Montant : {{ data.Montant }} {{data.Devise}} </td></p>
+		</tr>{% endfor %}
+	
+
+		</body>
+	<div class ="footer"><a href='/'>Retour à la page précedente</a></div>
+
+	<script src="static/refresh.js"></script>
+	</html>

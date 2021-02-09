@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Arsene Lapin World - Flask Project</title>
+		  <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    
+    <body>
+
+      <h5>Fonctions</h5>  
+      <div><adress><a href = "formulaire"> Saisir ou ajouter un document</a></adress></div>
+  
+      <h5>En devellopement</h5>
+      <div><adress><a href = "database">Consultation</a></adress></div>
+      <div><adress><a href = "situation">Ma situation</a></adress></div>
+
+  
+      <h5>En attente</h5>
+
+      <div class = "Roadmap">
+        <h2>ROADMAP</h2> 
+        <p></p>
+        <p>Recherche spécifique </p>
+        <p><adress><a href = "database-Research">Recherche avec image</a></adress></p>
+
+        <p>Bot</p>
+        <p><adress><a href = "bot-compta">Suggestion Comptable</a></adress></p>
+        
+        <p>Revision : </h5>
+        <p><adress><a href = "compte-Resultat">Compte de Résultat simplifié</a></adress></p>
+        <p><adress><a href = "bilan">Bilan simplifié</a></adress></p>
+        
+        <p>Traduction comptable :</p>
+        <p><adress><a href = "comptabilise">Comptabilise !</a></adress></p>
+      </div>
+    </body>
+      
+      <div class="Arsene">
+
+        <div class="bandeau">
+          <img src="https://www.woopets.fr/assets/races/000/402/big-portrait/lapin.jpg"style = "width:20px;height:30px;";> Arsene Lapin
+          
+          <div class="box" id ="Initiation_Arsene" method="GET">
+              <span><img src="https://www.woopets.fr/assets/races/000/402/big-portrait/lapin.jpg"style = "width:25px;height:35px;"> {{Arsene}}</span>
+            
+            <form method="POST" enctype="multipart/form-data">
+            <div id="user_Input">
+              <input id = "textInput" type="text" name="msg" placeholder="Message"/>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="static/refreshT.js"></script>
+      
+    <div class ="footer" align = right>By Hauet Joffrey</div>
+
+  </html>

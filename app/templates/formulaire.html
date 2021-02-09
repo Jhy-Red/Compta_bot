@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <meta charset="utf-8">
+    <title> Base de données</title>
+  </head>
+  <body>
+    <form method="POST" enctype="multipart/form-data">
+      <h2 onload="PreviewImage()">
+        Document(s) / Justificatif(s) : <input type="file" id = "justificatif_img" name="justificatif" accept="image/*" onchange="PreviewImage();" multiple >
+      </h2>
+        
+
+         <div class="split left">
+           <h5><label>Date</label> : <input type="date" name="date" size = 3/></h5>
+           <h5><label>Operation</label> :
+            <select name="op">
+              <option value ="AC">Achat</option>
+              <option value ="VT">Vente</option>
+              <option value ="OD">Divers</option>
+              <option value ="Z">Depot de document</option>
+            </select></h5>
+            
+            <h5><label>Tiers</label> : <input type="text" name="tiers" size = 15/></h5>             
+            <h5><label>Objet</label> : <input type="text" name="objet" size = 50/></h5>
+            <h5><label>Montant</label> : <input type="number" name="ttc" step=0.01 value=0 size =3 />
+              <select name="currency">
+                <option value ="€">€</option>
+              </select></h5>
+              <h5><center><input type="submit" value="Validation" /></center></h5>
+            </div>
+          </form>
+            
+            #should fit to screen
+            <div class="split right"> 
+               <img id="uploadPreview" class = "facture"/>
+            </div>
+            <div class = "footer">
+              <a href='/'>Retour à la page précedente</a>
+            </div>
+        </body>
+        <script src="static/visualisation.js"></script>
+      </html>

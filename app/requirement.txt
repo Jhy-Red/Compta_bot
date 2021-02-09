@@ -1,0 +1,7 @@
+Flask 
+pymongo
+flask_pymongo
+datetime
+pandas
+xlrd 
+pprint

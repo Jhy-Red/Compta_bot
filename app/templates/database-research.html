@@ -1,0 +1,34 @@
+<!doctype html>
+	<html lang="fr">
+		<head>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+			<meta charset="utf-8">
+			<title>Database - Research</title>
+		</head>
+		<body>
+			<form>
+				<h5><label>Operation</label> :
+					<select name="op">
+						<option value ="AC">Achat</option>
+						<option value ="VT">Vente</option>
+						<option value ="OD">Divers</option>
+						<option value ="Autres">Depot de document</option>
+					</select>
+					<label>Tiers</label> : <input type="text" name="tiers" size = 15/>          
+					<label>Objet</label> : <input type="text" name="objet" size = 50/>
+					
+					<input type="submit" value="Recherche" /></center></h5>
+
+					<!--
+						<h5><label>Date</label> : <input type="date" name="date" size = 3/></h5>
+						<h5><label>Montant</label> : <input type="number" name="ttc" step=0.01 value=0 size =3 />
+							<select name="currency">
+								<option value ="€">€</option>
+							</select></h5>
+			   <img src={url_for('img',img_src = montant[''])}>-->
+			 </div>
+		   </form>
+	  <p>{request}.</p>
+      <div align="right"><a href='/'>Retour à la page précedente</a></div>
+		</body>
+	</html>

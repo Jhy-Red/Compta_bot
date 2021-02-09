@@ -1,0 +1,23 @@
+<!doctype html>
+	<html lang="fr">
+		<head>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+			<meta charset="utf-8">
+			<title>Situation</title>
+		</head>
+		<body>
+			  <h2>Synthèse</h2>
+			  
+			  <h1></h1>
+			  <p>Il y a {{nombre}} enregistrement dans la base de donnée</p>
+				<h1> </h1>
+			  <p>Votre résultat est de {{resultat}} € avant tout retraitement comptable</p>
+
+			  <p>Il est composée d'un 
+				<l>chiffre d'affaire de {{CA}} €</l>
+				  et
+				  <l>de {{depense}} € de charges </l></p>
+
+		</body>
+		<div class ="footer"><a href='/'>Retour à la page précedente</a></div>
+	</html>
